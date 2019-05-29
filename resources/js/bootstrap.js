@@ -2,6 +2,9 @@ import { getCookieValue } from './util'
 
 window._ = require('lodash');
 
+import M from 'materialize-css'
+window.M = M
+
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -13,7 +16,6 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
-} catch (e) {}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -61,7 +63,3 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
-
-$(document).ready(function(){
-    $('.tabs').tabs();
-  });

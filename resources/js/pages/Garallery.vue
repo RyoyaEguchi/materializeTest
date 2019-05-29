@@ -6,7 +6,7 @@
       <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
     </div>
     <div class="card-tabs">
-      <ul class="tabs tabs-fixed-width">
+      <ul class="tabs tabs-fixed-width" ref="tabs">
         <!-- <li class="tab"><router-link tag="a" href="#test4" to="">test 1</router-link></li>
         <li class="tab"><router-link tag="a" href="#test5" to="">test 2</router-link></li>
         <li class="tab"><router-link tag="a" href="#test6" to="">test 3</router-link></li> -->
@@ -26,10 +26,14 @@
 
 <script>
 export default {
-  created() {
- $(document).ready(function(){
-    $('.tabs').tabs();
-  });
+  data () {
+    return {
+      tab: null
+    }
+  },
+  mounted() {
+    console.log(this.$refs.tabs)
+    this.tab = window.M.Tabs.init(this.$refs.tabs)
   }
 }
 </script>
