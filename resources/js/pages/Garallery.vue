@@ -32,7 +32,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$refs.tabs)
     this.tab = window.M.Tabs.init(this.$refs.tabs)
   }
 }
