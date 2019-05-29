@@ -1,3 +1,5 @@
+import { getCookieValue } from './util'
+
 window._ = require('lodash');
 
 /**
@@ -22,6 +24,12 @@ try {
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+window.axios.interceptors.request.use(config => {
+    config.headers['X-XSRF-TOKEN'] = getCookieValue('XSRF-TOKEN');
+
+    return config;
+});
 
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
@@ -53,3 +61,7 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+$(document).ready(function(){
+    $('.tabs').tabs();
+  });

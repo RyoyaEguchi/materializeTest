@@ -1,9 +1,11 @@
-import Vue from 'vue'
+import './bootstrap'
 
-new Vue({
-    el: '#app',
-    template: '<h1>Hello World</h1>'
-})
+import Vue from 'vue'
+import router from './router'
+import store from './store'
+import App from './App.vue'
+
+
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -11,9 +13,9 @@ new Vue({
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+// require('./bootstrap');
 
-window.Vue = require('vue');
+// window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -34,6 +36,16 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
+const createApp = async () => {
+  await store.dispatch('auth/currentUser');
+
+  new Vue({
     el: '#app',
-});
+    router,
+    store,
+    components: { App },
+    template: '<App />'
+  });
+}
+
+createApp();
