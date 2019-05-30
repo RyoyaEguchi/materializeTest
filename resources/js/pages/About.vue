@@ -7,16 +7,26 @@
           <p>I'm Ryoya Eguchi.<br>I show you a picture. It's me.</p>
         </div>
         <div class="card-tabs">
-          <ul class="tabs tabs-fixed-width">
-            <!-- <li class="tab"><router-link tag="a" href="#skill" to="about">Skill</router-link></li> -->
-            <!-- <li class="tab"><router-link tag="a" href="#study" to="about">study</router-link></li> -->
+          <ul class="tabs tabs-fixed-width" ref="tabs">
             <li class="tab"><a href="#skill" @click.prevent>SKILL</a></li>
             <li class="tab"><a href="#study" @click.prevent>STUDY</a></li>
           </ul>
         </div>
         <div class="card-content grey lighten-4">
-          <div id="skill">skill</div>
-          <div id="study">study</div>
+          <div id="skill">
+            <p>
+              I have many skills.<br>
+              If you want to see my skills, you will click links.
+            </p>
+            <router-link class="waves-effect waves-light btn link-btn" to="/skills">MORE READ</router-link>
+          </div>
+          <div id="study">
+            <p>
+              I did studys. For example, deep-learning, birds AI, Gender bias, and more.<br>
+              If you want to see detail of studys, you will click links.
+            </p>
+            <router-link class="waves-effect waves-light btn link-btn" to="/study">MORE READ</router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -55,5 +65,17 @@
       </div>
     </div>
   </div>
-</tempate>
+</template>
 
+<script>
+export default {
+  data() {
+    return {
+      tab: null,
+    }
+  },
+  mounted() {
+    this.tab = window.M.Tabs.init(this.$refs.tabs);
+  }
+}
+</script>

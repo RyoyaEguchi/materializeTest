@@ -1,10 +1,10 @@
 <template>
-  <div>
-  <header>
-    <Navbar />
-  </header>
+  <div class="app-container">
+    <header>
+      <Navbar />
+    </header>
     <main>
-      <div class="container">
+      <div>
         <RouterView />
       </div>
     </main>
@@ -23,3 +23,15 @@ export default {
   }
 }
 </script>
+<style>
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+</style>
+

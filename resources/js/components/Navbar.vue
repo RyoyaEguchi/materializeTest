@@ -9,13 +9,13 @@
         </ul>
       </div>
       <div class="nav-content container">
-        <ul class="tabs tabs-transparent">
-          <li class="tab"><router-link to="/"><i class="material-icons left">adb</i>Top</router-link></li>
-          <li class="tab"><router-link to="/about"><i class="material-icons left">android</i>ABOUT</router-link></li>
-          <li class="tab"><router-link to="/skills"><i class="material-icons left">build</i>SKILLS</router-link></li>
-          <li class="tab"><router-link to="/study"><i class="material-icons left">border_color</i>STUDY</router-link></li>
-          <li class="tab"><router-link to="/garallery">GARALLERY</router-link></li>
-          <li class="tab"><router-link to="/contact"><i class="material-icons left">contact_mail</i>CONTACT</router-link></li>
+        <ul class="tabs tabs-transparent row">
+          <li class="tab col s2"><router-link to="/">Top</router-link></li>
+          <li class="tab col s2"><router-link to="/about">ABOUT</router-link></li>
+          <li class="tab col s2"><router-link to="/skills">SKILLS</router-link></li>
+          <li class="tab col s2"><router-link to="/study">STUDY</router-link></li>
+          <li class="tab col s2"><router-link to="/garallery">Garallery</router-link></li>
+          <li class="tab col s2"><router-link to="/contact">CONTACT</router-link></li>
         </ul>
       </div>
     </nav>
@@ -24,12 +24,23 @@
 
 <script>
 export default {
+  data: {
+    hoverTab: '',
+  },
   computed: {
     isLogin() {
       return this.$store.getters['auth/check'];
     },
     username() {
       return this.$store.getters['auth/username'];
+    }
+  },
+  methods: {
+    mouseOver: function() {
+      this.hoverTab = '';
+    },
+    mouseleave: function() {
+      this.hoverTab = '';
     }
   }
 }

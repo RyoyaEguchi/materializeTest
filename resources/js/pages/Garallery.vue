@@ -7,11 +7,8 @@
     </div>
     <div class="card-tabs">
       <ul class="tabs tabs-fixed-width" ref="tabs">
-        <!-- <li class="tab"><router-link tag="a" href="#test4" to="">test 1</router-link></li>
-        <li class="tab"><router-link tag="a" href="#test5" to="">test 2</router-link></li>
-        <li class="tab"><router-link tag="a" href="#test6" to="">test 3</router-link></li> -->
         <li class="tab"><a href="#test4">Test 1</a></li>
-        <li class="tab"><a class="active" href="#test5">Test 2</a></li>
+        <li class="tab"><a href="#test5">Test 2</a></li>
         <li class="tab"><a href="#test6">Test 3</a></li>
       </ul>
     </div>

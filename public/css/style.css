@@ -1,3 +1,34 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+    
+
 .navbar-fixed {
   padding-bottom: 120px;
+}
+
+/* -------------- Contact.vue -------------- */
+.contact__wrapper {
+  padding: 5vh;
+  min-height: 65vh;
+}
+
+/* -------------- Common -------------- */
+.subtitle {
+  font-size: 20vw;
+  font-weight: lighter;
+}
+
+.submit-btn {
+  margin-top: 25px;
+}
+
+.link-btn {
+  margin-top: 10px;
 }

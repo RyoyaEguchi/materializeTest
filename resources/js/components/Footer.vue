@@ -6,7 +6,7 @@
           <h5 class="white-text">Footer Content</h5>
           <p class="grey-text text-lighten-4">You can use rows and columns</p>
         </div>
-        <div class="col l4 offset-l2 s12">
+        <!-- <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
           <ul>
             <li><router-link class="grey-text text-lighten-3" to="/">Top</router-link></li>
@@ -15,7 +15,7 @@
             <li><router-link class="grey-text text-lighten-3" to="/study">STUDY</router-link></li>
             <li><router-link class="grey-text text-lighten-3" to="/contact">CONTACT</router-link></li>
           </ul>
-        </div>
+        </div> -->
         <div>
           <button v-if="isLogin" class="waves waves-light btn" @click="logout"><i class="material-icons">person_outline</i></button>
         </div>
