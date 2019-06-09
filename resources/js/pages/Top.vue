@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <!-- --------------------------------------------------- About --------------------------------------------------- -->
     <div class="row">
       <div class="col l4 m4 left">
@@ -92,17 +92,24 @@
     <!-- --------------------------------------------------- Contact --------------------------------------------------- -->
     <div class="row">
       <div class="col l4 s4 left">
-        <h1 class="grey-text">It's my skills</h1>
+        <h1 class="grey-text">If you want contact</h1>
         <h5 class="grey-text lighten-1">About explains about me.<br>
                                         I hope you get to know my outline.</h5>
         <h1 class="subtitle indigo-text text-lighten-5 col s4 m4">05</h1>
+      </div>
+      <div class="col l8 m8 right">
+        <Contact />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Contact from './Contact.vue'
 export default {
+  components: {
+    Contact
+  },
   data() {
     return {
       tab: null,

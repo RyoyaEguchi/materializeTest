@@ -2379,6 +2379,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Contact_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Contact.vue */ "./resources/js/pages/Contact.vue");
 //
 //
 //
@@ -2482,7 +2483,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Contact: _Contact_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       tab: null
@@ -54889,7 +54897,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row" }, [
       _vm._m(0),
       _vm._v(" "),
@@ -55022,7 +55030,11 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "divider" }),
     _vm._v(" "),
-    _vm._m(9)
+    _c("div", { staticClass: "row" }, [
+      _vm._m(9),
+      _vm._v(" "),
+      _c("div", { staticClass: "col l8 m8 right" }, [_c("Contact")], 1)
+    ])
   ])
 }
 var staticRenderFns = [
@@ -55192,24 +55204,22 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col l4 s4 left" }, [
-        _c("h1", { staticClass: "grey-text" }, [_vm._v("It's my skills")]),
-        _vm._v(" "),
-        _c("h5", { staticClass: "grey-text lighten-1" }, [
-          _vm._v("About explains about me."),
-          _c("br"),
-          _vm._v(
-            "\n                                      I hope you get to know my outline."
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "h1",
-          { staticClass: "subtitle indigo-text text-lighten-5 col s4 m4" },
-          [_vm._v("05")]
+    return _c("div", { staticClass: "col l4 s4 left" }, [
+      _c("h1", { staticClass: "grey-text" }, [_vm._v("If you want contact")]),
+      _vm._v(" "),
+      _c("h5", { staticClass: "grey-text lighten-1" }, [
+        _vm._v("About explains about me."),
+        _c("br"),
+        _vm._v(
+          "\n                                      I hope you get to know my outline."
         )
-      ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "h1",
+        { staticClass: "subtitle indigo-text text-lighten-5 col s4 m4" },
+        [_vm._v("05")]
+      )
     ])
   }
 ]
